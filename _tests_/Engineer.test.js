@@ -37,3 +37,10 @@ test("if I pass a fourth parameter it should assign a github username in the obj
     expect(testVariable.github).toBe("mike88")
 
 })
+
+test("if I get role from an engineer it should their role", () => {
+    let testVariable = new Engineer("Mike","007","mike@yahoo.com","mike88")
+    
+    console.log(testVariable)
+    expect(testVariable.getRole()).toBe("Engineer");
+})
