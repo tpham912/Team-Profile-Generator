@@ -11,7 +11,7 @@ const generateHTML = (response) =>
 </head>
 
 <body>
-  <header class="p-3 mb-2 bg-primary text-white text-xl-center">${response.teamName}</header>
+  <header class="p-3 mb-2 bg-primary text-white text-xl-center">Best Team EVER</header>
   <div class="card d-flex justify-content-center" style="width: 40rem;">
 ${addEmployees(response)}
 
@@ -22,7 +22,6 @@ ${addEmployees(response)}
 function addEmployees (response){
   let output = "";
 
-  console.log("TESTTTTTTTT")
   console.log(response)
   for (let i = 0; i < response.length; i++) {
     let employee = response[i]; 
@@ -34,8 +33,9 @@ function addEmployees (response){
             <div class="card-body">
               <h5 class="card-title">${employee.getName()}</h5>
               <p class="card-text">${employee.getRole()}</p>
-              <p class="list-group-item">${employee.getID()}</p>
-              <p class="list-group-item">${employee.getOfficeNumber()}</p>
+              <p class="list-group-item">ID: ${employee.getID()}</p>
+              <p class="list-group-item">Email: <a href='mailto:${employee.getEmail()}'>${employee.getEmail()}</a></p>
+              <p class="list-group-item">Office Number: ${employee.getOfficeNumber()}</p>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ function addEmployees (response){
               <h5 class="card-title">${employee.getName()}</h5>
               <p class="card-text">${employee.getRole()}</p>
               <p class="list-group-item">ID: ${employee.getID()}</p>
-              <p class="list-group-item">GitHub: ${employee.getGitHub()}</p>
+              <p class="list-group-item">GitHub: <a href='https://www.github.com/${employee.getGitHub()}'> Profile </a></p>
             </div>
           </div>
         </div>
@@ -71,8 +71,8 @@ function addEmployees (response){
 
     }
     console.log(output);
-    return output;
   }
+  return output;
 }
 
 
