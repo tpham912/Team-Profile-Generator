@@ -15,15 +15,15 @@ test("if I pass a first parameter it should assign a name in the object", () => 
 })
 
 test("if I pass a second parameter it should assign an id in the object", () => {
-    let testVariable = new Engineer("Mike","007")
+    let testVariable = new Engineer("Mike","238")
     
     console.log(testVariable)
-    expect(testVariable.id).toBe("007")
+    expect(testVariable.id).toBe("238")
 
 })
 
 test("if I pass a third parameter it should assign an email in the object", () => {
-    let testVariable = new Engineer("Mike","007","mike@yahoo.com")
+    let testVariable = new Engineer("Mike","238","mike@yahoo.com")
     
     console.log(testVariable)
     expect(testVariable.email).toBe("mike@yahoo.com")
@@ -31,7 +31,7 @@ test("if I pass a third parameter it should assign an email in the object", () =
 })
 
 test("if I pass a fourth parameter it should assign a github username in the object", () => {
-    let testVariable = new Engineer("Mike","007","mike@yahoo.com","mike88")
+    let testVariable = new Engineer("Mike","238","mike@yahoo.com","mike88")
     
     console.log(testVariable)
     expect(testVariable.github).toBe("mike88")
@@ -39,7 +39,7 @@ test("if I pass a fourth parameter it should assign a github username in the obj
 })
 
 test("if I get role from an engineer it should their role", () => {
-    let testVariable = new Engineer("Mike","007","mike@yahoo.com","mike88")
+    let testVariable = new Engineer("Mike","238","mike@yahoo.com","mike88")
     
     console.log(testVariable)
     expect(testVariable.getRole()).toBe("Engineer");
