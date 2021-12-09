@@ -8,11 +8,12 @@ const generateHTML = (response) =>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Profile Generator</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="p-3 mb-2 bg-primary text-white text-xl-center">Best Team EVER</header>
-  <div class="card d-flex justify-content-center" style="width: 40rem;">
+  <header class="bg-primary text-white text-xl-center" class="header">The Office Team</header>
+  <div class="d-flex justify-content-around">
 ${addEmployees(response)}
 
   </div>
@@ -30,7 +31,7 @@ function addEmployees (response){
       output += `
         <div class="row">
           <div class="card col mx-5">
-            <div class="card-body">
+            <div class="card-header">
               <h5 class="card-title">${employee.getName()}</h5>
               <p class="card-text">${employee.getRole()}</p>
               <p class="list-group-item">ID: ${employee.getID()}</p>
@@ -45,11 +46,11 @@ function addEmployees (response){
       output += `
         <div class="row">
           <div class="card col mx-5">
-            <div class="card-body">
+            <div class="card-header">
               <h5 class="card-title">${employee.getName()}</h5>
               <p class="card-text">${employee.getRole()}</p>
               <p class="list-group-item">ID: ${employee.getID()}</p>
-              <p class="list-group-item">GitHub: <a href='https://www.github.com/${employee.getGitHub()}'> Profile </a></p>
+              <p class="list-group-item">GitHub: <a href='https://www.github.com/${employee.getGitHub()}'>GitHub Profile</a></p>
             </div>
           </div>
         </div>
@@ -59,11 +60,11 @@ function addEmployees (response){
         output += `
           <div class="row">
             <div class="card col mx-5">
-              <div class="card-body">
+              <div class="card-header">
                 <h5 class="card-title">${employee.getName()}</h5>
                 <p class="card-text">${employee.getRole()}</p>
-                <p class="list-group-item">${employee.getID()}</p>
-                <p class="list-group-item">${employee.getSchool()}</p>
+                <p class="list-group-item">ID: ${employee.getID()}</p>
+                <p class="list-group-item">School: ${employee.getSchool()}</p>
               </div>
             </div>
           </div>

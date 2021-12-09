@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/tpham912/Team-Profile-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.1.2"
+    "inquirer": "^8.2.0"
   },
   "devDependencies": {
     "jest": "^27.1.0"
