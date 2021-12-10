@@ -12,8 +12,8 @@ const generateHTML = (response) =>
 </head>
 
 <body>
-  <header class="bg-primary text-white text-xl-center" class="header">The Office Team</header>
-  <div class="d-flex justify-content-around">
+  <header class="bg-primary text-white text-center" class="header">The Office Team</header>
+  <div class="d-flex flex-wrap justify-content-around">
 ${addEmployees(response)}
 
   </div>
@@ -50,6 +50,7 @@ function addEmployees (response){
               <h5 class="card-title">${employee.getName()}</h5>
               <p class="card-text">${employee.getRole()}</p>
               <p class="list-group-item">ID: ${employee.getID()}</p>
+              <p class="list-group-item">Email: <a href='mailto:${employee.getEmail()}'>${employee.getEmail()}</a></p>
               <p class="list-group-item">GitHub: <a href='https://www.github.com/${employee.getGitHub()}'>GitHub Profile</a></p>
             </div>
           </div>
@@ -64,6 +65,7 @@ function addEmployees (response){
                 <h5 class="card-title">${employee.getName()}</h5>
                 <p class="card-text">${employee.getRole()}</p>
                 <p class="list-group-item">ID: ${employee.getID()}</p>
+                <p class="list-group-item">Email: <a href='mailto:${employee.getEmail()}'>${employee.getEmail()}</a></p>
                 <p class="list-group-item">School: ${employee.getSchool()}</p>
               </div>
             </div>
