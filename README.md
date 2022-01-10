@@ -25,7 +25,7 @@ Walkthrough video: [Team Profile Generator](https://watch.screencastify.com/v/RX
 
 # Links
 
-GitHub URL: 
+GitHub URL: https://tpham912.github.io/Team-Profile-Generator/
 
 # Contributor 
 
